@@ -7,6 +7,46 @@
 <li></li>
 </ul>
 
+*server.js (웹 서버 코드) 내용*
+<details>
+  ```
+  const express = require("express");
+  const app = express();
+  const PORT = 8080;
+  //컨테이너 주소이기도 함. EXPOSE에 작성.
+
+  app.listen(PORT, ()=>{
+   console.log(`서버 실행 중: http://localhost:${PORT}`)
+   });
+
+   app.get('/', (req, res)=>{
+    res.send("Hello World!")
+    });
+  ```
+</details>
+
+*package.json 내용*
+<details>
+```
+{
+ "name":"Docker-express-server",
+ "version":"1.0.0",
+ "main":"server.js",
+ "dependencies":{
+   "express":"^5.18.2"
+   }
+}
+```
+
+- main에는 서버 코드가 작성된 파일 이름을 적어줍니다.
+- dependencies의 내용과 버전은 무엇을 사용하느냐에 따라 달라집니다.
+</details>
+
+
+
+
+
+
 
 <h4>Dockerfile 작성</h4>
 <ul>
