@@ -9,6 +9,7 @@
 
 server.js (웹 서버 코드) 내용
 <details>
+  <summary>server.js</summary>
   ```
   const express = require("express");
   const app = express();
@@ -27,6 +28,7 @@ server.js (웹 서버 코드) 내용
 
 package.json 내용
 <details>
+<summary>package.json</summary>
 
 ```
 {
